@@ -2,24 +2,48 @@
 <html>
 <head>
 	<title>	Word Guess Game By Liam Dinh</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div id="game">
-		<h3>Press any key to get started!</h3>
-		<h3>WINS</h3>
-		<h4 id="wins"></h4>
-		<h3>CURRENT WORD</h3>
-		<h4 id="currentWordString"></h4>
-		<h3>NUMBER OF GUESSES REMAINING</h3>
-		<h4 id="remainingGuesses"></h4>
-		<h3>LETTERS ALREADY GUESSED</h3>
-		<h4 id="lettersAlreadyGuessed"></h4>
-
-
+	<div class="flex-container">
+		<div>
+			<h1>Welcome To The Word Guess Game!</h1>
+		</div>
 	</div>
-
+	<div class="row">
+		<div class="col-md-12">		
+		<div id="game">
+			<div class="getStarted">
+				<h3>Press any key to get started!</h3>
+			</div>
+			
+			<div class="wins">
+				<h3>WINS</h3>
+				<h4 id="wins"></h4>
+			</div>
+			
+			<div class="currentWord">
+				<h3>CURRENT WORD</h3>
+				<h4 id="currentWordString"></h4>
+			</div>
+			
+			<div class="remainingGuesses">
+				<h3>NUMBER OF GUESSES REMAINING</h3>
+				<h4 id="remainingGuesses"></h4>
+			</div>
+		
+			<div class="lettersAlreadyGuessed">
+				<h3>LETTERS ALREADY GUESSED</h3>
+				<h4 id="lettersAlreadyGuessed"></h4>
+			</div>
+		
+			<div class="checkLoss">
+				<h2 id="checkLoss"></h2>
+			</div>
+		
+		</div>
+	</div>
 
 	</div>
 	

@@ -1,0 +1,12 @@
+.flex-container {
+	background-color: blue;
+	color: white;
+	display: flex;
+	justify-content: center;
+
+}
+
+
+.row {
+	align-content: center;
+}

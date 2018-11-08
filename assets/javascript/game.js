@@ -8,6 +8,8 @@ var finished = false;
 var currentWord = [];
 var mysteriousWord = "";
 
+var winSound = new Audio('./assets/sounds/Derek_Clegg-Selfish.mp3');
+
 //Reset game when we first start or when the game is over
 // Randomly choose an artist name from the artitstNames array and assign it to mysteriousWord
 // Here I set the number of guesses to be double the amount of characters in the name of the artist. Alternatively I could set this to a fixed number
@@ -16,6 +18,8 @@ var mysteriousWord = "";
 // I then call the displayGame() function
 
 function resetGame() {
+	winSound.pause();
+	document.getElementById('checkLoss').innerHTML = "";
 	 mysteriousWord = artistNames[Math.floor(Math.random()*artistNames.length)].toLowerCase();
 
 	remainingGuesses = mysteriousWord.length * 2; 
@@ -63,6 +67,7 @@ function wordCheck(word, letter) {
 function checkWin(){
 	if (currentWordString === mysteriousWord) {
 		wins++;
+		winSound.play();
 		finished = true;
 	}
 }
@@ -71,7 +76,9 @@ function checkWin(){
 // checkLoss function is to check whether the user runs out of guesses and still have not won, and reset finished to true
 function checkLoss() {
 	if (remainingGuesses <= 0) {
+		document.getElementById('checkLoss').innerHTML = "YOU LOST! PRESS ANY KEY TO START THE GAME AGAIN!";
 		finished = true;
+
 	}
 }
 
